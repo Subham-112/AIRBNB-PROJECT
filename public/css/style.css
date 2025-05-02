@@ -1,0 +1,173 @@
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-weight: 400 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+nav {
+    height: 70px;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+footer {
+    height: 100px;
+    background-color: rgb(201, 201, 201);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-socials i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.f-oth-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-oth-info a {
+    margin-right: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.f-oth-info a:hover {
+    text-decoration: underline;
+}
+
+.listing-card {
+    border: 2px solid black;
+    margin: 0px 20px 20px 0px;
+}
+
+.card img {
+    height: 300px !important;
+    border-radius: 15px;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.anc {
+    text-decoration: none !important;
+}
+
+.card-img-overlay {
+    opacity: 0 !important;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2 !important;
+    background-color: white!important;
+}
+
+.add-btn {
+    width: 60px;
+    height: 30px;
+    background-color: #fe424d !important;
+    border: none !important;
+    border-radius: 5px;
+    color: white !important;
+}
+
+.edit-btn {
+    width: 80px;
+    height: 35px;
+    background-color: #fe424d !important;
+    border: none !important;
+    border-radius: 5px;
+    color: white !important;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px 0px 0px;
+}
+
+.dlt-btn {
+    height: 35px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    margin: 10px 20px 0px 0px;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-cont {
+    display: flex !important;
+    flex-direction: row !important;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.show-img {
+    width: 400px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.show-text {
+    width: 500px;
+    margin: 0px 0px 0px 30px;
+}
+
+.show-ttl {
+    width: 900px;
+    height: 35px;
+    font-size: 30px;
+    margin-left: -2px;
+}
+
+.review .rating {
+    margin-top: 20px;
+}
+
+.review .review-text {
+    margin-top: 20px;
+}
+
+.review .review-text .rev-txt {
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.sin {
+    margin-left: 900px;
+}
+
+.log {
+    margin-left: 10px;
+}
