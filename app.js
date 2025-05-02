@@ -94,10 +94,6 @@ app.listen(port, () => {
     console.log(`Listening on port : ${port}`);
 });
 
-app.get('/', (req, res) => {
-    res.send("Hello! I'm root")
-});
-
 
 app.all(/.*/, (req, res, next) => {
     next(new ExpressError(404, "Page Not Found"));
