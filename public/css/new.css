@@ -1,0 +1,37 @@
+.new-container {
+    margin-top: 1.5rem;
+}
+
+.new-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-content h3 {
+    font-weight: 600;
+}
+
+.add-btn {
+    width: 6rem;
+    height: 2.5rem;
+    background-color: #fe424d !important;
+    border: none !important;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: white !important;
+    margin: 0;
+}
+
+@media only screen and (max-width: 400px) {
+    .add-btn {
+        margin-left: 7.5rem !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .add-btn {
+        margin-left: 11.5rem;
+    }
+}

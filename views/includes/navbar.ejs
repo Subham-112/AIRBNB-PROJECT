@@ -1,27 +1,44 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/allLists"><i class="fa-regular fa-compass"></i></a>
+<nav>
+  <div class="nav-container">
+    <div class="logo">
+      <a class="navbar-brand" href="/allLists"><i class="fa-brands fa-airbnb"></i>airbnb</a>
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="navbar-nav">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/allLists">All Lists</a>
-          <a class="nav-link" href="/allLists/new">Create new</a>
-        </div>
+    </div>
 
-        <div class="navbar-nav ms-auto">
-          <% if(!currUser) { %>
-          <a class="nav-link" href="/signup">Signup</a>
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+      <input type="text" id="searchInput" placeholder="Search Here by Location">
+    </div>
+
+    <div class="hamB" id="hamB">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div id="navbarNav">
+      <div class="navbar-nav">
+        <a class="nav-link nw" href="/allLists/new">
+          <i class="fa-solid fa-plus"></i>
+          <span class="nw-text">Create New</span>
+        </a>
+      </div>
+
+      <% if(!currUser) { %>
+        <div class="navbar-nav"></div>
+          <a class="nav-link sn" href="/signup">Signup</a>
           <a class="nav-link" href="/login">Login</a>
-            <% } %>
-          <% if(currUser) { %>
-            <form action="/logout" method="post" style="display: inline;">
-              <button type="submit" class="nav-link btn btn-link">Logout</button>
-            </form>
-            <% } %>
         </div>
+        <% } %>
+        <% if(currUser) { %>
+        <div class="navbar-nav">
+          <form action="/logout" method="post" style="display: inline;">
+            <button type="submit" class="nav-link btn btn-link">Logout</button>
+          </form>
+        </div>
+        <% } %>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>

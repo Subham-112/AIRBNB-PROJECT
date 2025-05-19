@@ -1,0 +1,58 @@
+.edit-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-page h3 {
+    margin: 1rem 0;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit-form input {
+    width: 50rem;
+}
+
+.edit-form textarea {
+    height: 10rem;
+    resize: vertical;
+}
+
+.oth {
+    display: flex;
+    justify-content: space-between;
+}
+
+.oth input {
+    width: 24rem;
+}
+
+.upd-btn {
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .edit-form input {
+        width: 40rem;
+    }
+
+    .oth input {
+        width: 19rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .edit-form input {
+        width: 20rem;
+    }
+
+    .oth input {
+        width: 9rem;
+    }
+}

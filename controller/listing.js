@@ -2,11 +2,11 @@ const Listing = require('../Models/listing');
 
 module.exports.index = async (req, res) => {
     let allLists = await Listing.find({});
-    res.render("listings/index.ejs", { allLists });
+    res.render("listings/index.ejs", { allLists, page: "index" });
 }
 
 module.exports.newListing = (req, res) => {
-    res.render("listings/new.ejs");
+    res.render("listings/new.ejs", { page: "new" });
 }
 
 module.exports.showListing = async (req, res) => {
@@ -23,7 +23,7 @@ module.exports.showListing = async (req, res) => {
         req.flash("error", "Listing you looking for isn't exist");
         return res.redirect("/allLists")
     }
-    res.render("listings/show.ejs", { listing });
+    res.render("listings/show.ejs", { listing, page: "show" });
 }
 
 module.exports.createListing = async (req, res) => {
@@ -47,7 +47,7 @@ module.exports.editListing = async (req, res) => {
     let originalImage = listing.image.url;
     let modifyUrl = originalImage.replace("/upload", "/upload/w_250");
 
-    res.render("listings/edit.ejs", { listing, modifyUrl });
+    res.render("listings/edit.ejs", { listing, modifyUrl, page: 'edit' });
 }
 
 module.exports.updateListing = async (req, res) => {

@@ -1,0 +1,77 @@
+.country-section {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.country-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 10px 0 10px 5px;
+}
+
+.listing-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.listing-card {
+    border-radius: 20px;
+    flex: 0 0 auto;
+    width: 12.4rem;
+    border: none;
+}
+
+.listing-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.listing-item {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card img {
+    height: 190px !important;
+    border-radius: 15px;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body p {
+    margin-left: -0.7rem;
+}
+
+.li-det {
+    margin-top: -0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.li-pr {
+    font-size: 0.9rem;
+    margin: 0;
+    margin-top: -2.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .listing-card {
+        width: 9.8rem;
+    }
+
+    .card img {
+        height: 150px !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .listing-row {
+        gap: 30px;
+    }
+
+    .country-title {
+        font-size: 1.2rem;
+    }
+}

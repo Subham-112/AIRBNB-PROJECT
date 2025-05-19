@@ -1,24 +1,38 @@
-<% layout("/layouts/boilerplate") %> 
-
+<% layout("/layouts/boilerplate") %>
 
 <body>
-    <h2>All Listings</h2>
-    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1">
-        <% for(let lists of allLists) { %>
-            <a href="/allLists/<%= lists._id %>" class="anc">
-                <div class="card" style="width: 18rem; border: none;">
-                    <img src="<%= lists.image.url %>" class="card-img-top" alt="Images">
-                    <div class="card-img-overlay"></div>
-                    <div class="card-body">
-                        <p class="card-text">
-                            <%= lists.title %>
-                            <br>
-                            &#8377; <%= lists.price ? lists.price.toLocaleString("en-IN") : "N/A" %>
-                        </p>
-                        <br>
-                    </div>
-                </div>
-            </a>
-        <% } %>
+    <% const groupedByCountry = {};
+    allLists.forEach(listing => {
+      const country = listing.country || "Unknown";
+      if (!groupedByCountry[country]) {
+        groupedByCountry[country] = [];
+      }
+      groupedByCountry[country].push(listing);
+    }); %>
+
+  <% for (let country in groupedByCountry) { %>
+    <div class="country-section">
+      <div class="country-title">Popular Homes in <%= country %></div>
+      <div class="listing-row">
+        <% groupedByCountry[country].forEach(listing => { %>
+          <a href="/allLists/<%= listing._id %>"
+             class="listing-item"
+             data-title="<%= listing.title.toLowerCase() %>"
+             data-price="<%= listing.price %>"
+             data-country="<%= listing.country.toLowerCase() %>">
+            <div class="card listing-card">
+              <img src="<%= listing.image.url %>" class="card-img-top" alt="Image">
+              <div class="card-body">
+                <p class="card-text li-det">
+                  Hotel in <%= listing.location %></p> <br>
+                <p class="card-text li-pr">
+                  ₹ <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %>
+                </p>
+              </div>
+            </div>
+          </a>
+        <% }); %>
+      </div>
     </div>
+  <% } %>
 </body>

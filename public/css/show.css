@@ -1,0 +1,93 @@
+.edit-btn {
+    width: 80px;
+    height: 35px;
+    background-color: #fe424d !important;
+    border: none !important;
+    border-radius: 5px;
+    color: white !important;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px 0px 0px;
+}
+
+.dlt-btn {
+    height: 35px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    margin: 10px 20px 0px 0px;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-cont {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.show-img {
+    width: 20rem;
+    border-radius: 15px;
+}
+
+.show-text {
+    margin-left: 1rem;
+}
+
+.show-ttl {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+    .content {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .show-text {
+        margin: 0;
+    }
+
+    .show-img {
+        width: 100%;
+    }
+}
+
+.user {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user i {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(173, 173, 173);
+    border-radius: 50%;
+    margin-right: 0.3rem;
+}
+
+.review .review-text {
+    margin-top: 20px;
+}
